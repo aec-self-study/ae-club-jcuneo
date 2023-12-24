@@ -14,5 +14,3 @@ SELECT
 FROM `analytics-engineers-club.coffee_shop.customers` AS c
   LEFT JOIN orders_by_cust AS o
     ON o.customer_id = c.id
-ORDER BY min_order_created_at
-LIMIT 5
