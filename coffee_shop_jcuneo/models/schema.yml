@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: coffee_shop
+    project: analytics-engineers-club
+    tables:
+      - name: customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: customers
+    description: Cleaned up data for our customers; I'm adding additional text here to test where and how it shows up.
+    columns:
+      - name: id
+        description: Primary key of the model; more test text to see how this looks.
+        tests:
+          - unique
+          - not_null
