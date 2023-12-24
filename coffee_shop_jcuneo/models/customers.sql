@@ -1,3 +1,7 @@
+{{ config(
+  materialized="table"
+) }}
+
 WITH orders_by_cust AS (
   SELECT
     customer_id
@@ -13,4 +17,4 @@ SELECT
  ,o.min_order_created_at
 FROM `analytics-engineers-club.coffee_shop.customers` AS c
   LEFT JOIN orders_by_cust AS o
-    ON o.customer_id = c.id
+    ON c.id = o.customer_id
