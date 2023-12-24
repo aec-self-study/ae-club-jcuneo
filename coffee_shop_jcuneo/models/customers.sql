@@ -1,3 +1,7 @@
+{{ config(
+  materialized="table"
+) }}
+
 WITH orders_by_cust AS (
   SELECT
     customer_id
